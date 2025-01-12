@@ -1,5 +1,5 @@
 
-# Simple Install #
+# Simple Install
 
 ## Create conda env
 
@@ -12,14 +12,29 @@ conda activate bio-graph-env
 
 python load_and_Represent_graph.py
 
-# Testing #
+# Outout files 
+
+General performance
+Some performance metrics for the learning, random forest: results/evaluation_20250112_171908_rf.txt 
+Some performance metrics for the learning, neural network: results/evaluation_20250112_171909_nn.txt
+ROC curve overview: results/roc_curve_20250112_171909.png
+Comput performance of the script (for making sure it computes fast enough): results/performance_20250112_171910.txt
+
+Quality check:
+Graph image overview (to check input nodes and edges): results/graph_20250112_171602.png
+
+Results:
+Results of drug x disease predictions (random forest): results/results_20250112_171910.tsv
+Results of drug x disease predictions (neural network): results/results_nn_20250112_171910.txt
+
+# Testing
 
 Run:
 python -m unittest discover tests
 Only a simple testing framework has been created, as a marker more than a comprehensive testing structure
 
 
-# MAIN SCRIPT 
+# Main script
 Run: python load_and_Represent_graph.py 
 
 The script has the following content:
@@ -43,7 +58,8 @@ Evaluating the accuracy of the model with precision, recall and f1-score.
 Check the compute metrics: log_performance(start_time)
 For instance, compare how computationally expensive two different approaches are.
 
-# PACKAGE 
+
+# Package
 A package was created to break out some helper routines
 drugXdisease/__init__.py
 Handle the graph: drugXdisease/dXd_graph.py
@@ -55,22 +71,6 @@ Different learning approaches:
 drugXdisease/dXd_logisticRegression.py
 drugXdisease/dXd_neuralNet.py
 drugXdisease/dXd_randomForest.py
-
-# OUTPUT FILES 
-
-General performance
-Some performance metrics for the learning, random forest: results/evaluation_20250112_171908_rf.txt 
-Some performance metrics for the learning, neural network: results/evaluation_20250112_171909_nn.txt
-ROC curve overview: results/roc_curve_20250112_171909.png
-Comput performance of the script (for making sure it computes fast enough): results/performance_20250112_171910.txt
-
-Quality check:
-Graph image overview (to check input nodes and edges): results/graph_20250112_171602.png
-
-Results:
-Results of drug x disease predictions (random forest): results/results_20250112_171910.tsv
-Results of drug x disease predictions (neural network): results/results_nn_20250112_171910.txt
-
 
 
 # Conclusions  
