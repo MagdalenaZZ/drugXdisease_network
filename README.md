@@ -1,25 +1,28 @@
 
-## Simple Install ##
+# Simple Install #
 
-# Create conda env
+## Create conda env
 
 conda env create -f bio-graph-env.yaml
 conda activate bio-graph-env
 
 (for production, a docker image would maybe be a better choice, but this should work reasonable easy on many systems)
 
-# The script load_and_Represent_graph.py can be run 
+## The script load_and_Represent_graph.py can be run 
 
 python load_and_Represent_graph.py
 
-## Testing ##
+# Testing #
 
 Run:
 python -m unittest discover tests
 Only a simple testing framework has been created, as a marker more than a comprehensive testing structure
 
 
-## MAIN SCRIPT load_and_Represent_graph.py ##
+# MAIN SCRIPT 
+Run: python load_and_Represent_graph.py 
+
+The script has the following content:
 
 Generate embeddings from the sample graph:  def generate_node_embeddings(graph, dimensions=64, walk_length=30, num_walks=200, workers=4)
 
@@ -32,7 +35,6 @@ It uses 70% of data for training, and reserves 30% for testing
 Train the classifier: def train_classifier(X_train, y_train)
 Here, I chose a random forest classifier from sklearn, as a suitable and fairly fast learning approach, and a neural network approach.
 
-
 Create a graph from input data: def create_graph_from_data(nodes, edges):
 
 Evaluate the model: evaluate_model(classifier, X_test, y_test)
@@ -41,7 +43,7 @@ Evaluating the accuracy of the model with precision, recall and f1-score.
 Check the compute metrics: log_performance(start_time)
 For instance, compare how computationally expensive two different approaches are.
 
-## PACKAGE ##
+# PACKAGE 
 A package was created to break out some helper routines
 drugXdisease/__init__.py
 Handle the graph: drugXdisease/dXd_graph.py
@@ -54,7 +56,7 @@ drugXdisease/dXd_logisticRegression.py
 drugXdisease/dXd_neuralNet.py
 drugXdisease/dXd_randomForest.py
 
-## OUTPUT FILES ##
+# OUTPUT FILES 
 
 General performance
 Some performance metrics for the learning, random forest: results/evaluation_20250112_171908_rf.txt 
@@ -71,7 +73,7 @@ Results of drug x disease predictions (neural network): results/results_nn_20250
 
 
 
-## Conclusions ## 
+# Conclusions  
 
 - Higher features. I tried looking at network-based metrics to add into the embeddings. 
 For example:
@@ -94,7 +96,7 @@ Just adding in drugs, diseases, and targets, or adding in a wealth of other biol
 I ended up adding in more and more data, more edges, weights and adjusting the embeddings to make some test
 data gradually more complex.  
 
-# Test data
+- Test data
 It is really difficult to create test data, that has some similarity to real data. The real data existing is so
  complex and biased in different ways so it is almost impossible to reconstruct. In this case, it seems to make
  more sense just to use slices of real data for all training, testing and experiementation.
@@ -103,7 +105,7 @@ It is really difficult to create test data, that has some similarity to real dat
  during development.
 
 
-## Improvements ##
+# Improvements
 
 - The performance logging should be updated to include CPU etc which is suitable for the compute cluster we're at
 - The graph image that is written is not very helpful, it should be updated to a nicer looking perhaps
@@ -121,7 +123,7 @@ animal model experiments, or similar to build a case.
 
 
 
-## Some results ##
+# Some results
 
 Result 1: 
 Hyperpigmentation of the skin (MONDO:0019290) could be treated by Azelaic acid (CHEMBL.COMPOUND:CHEMBL1238)
