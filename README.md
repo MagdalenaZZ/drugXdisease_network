@@ -1,5 +1,5 @@
 
-# Simple Install
+## Simple Install
 
 ## Create conda env
 
@@ -12,7 +12,7 @@ conda activate bio-graph-env
 
 python load_and_Represent_graph.py
 
-# Outout files 
+## Output files
 
 General performance
 Some performance metrics for the learning, random forest: results/evaluation_20250112_171908_rf.txt 
@@ -27,14 +27,14 @@ Results:
 Results of drug x disease predictions (random forest): results/results_20250112_171910.tsv
 Results of drug x disease predictions (neural network): results/results_nn_20250112_171910.txt
 
-# Testing
+## Testing
 
 Run:
 python -m unittest discover tests
 Only a simple testing framework has been created, as a marker more than a comprehensive testing structure
 
 
-# Main script
+## Main script
 Run: python load_and_Represent_graph.py 
 
 The script has the following content:
@@ -59,7 +59,7 @@ Check the compute metrics: log_performance(start_time)
 For instance, compare how computationally expensive two different approaches are.
 
 
-# Package
+## Package
 A package was created to break out some helper routines
 drugXdisease/__init__.py
 Handle the graph: drugXdisease/dXd_graph.py
@@ -73,7 +73,7 @@ drugXdisease/dXd_neuralNet.py
 drugXdisease/dXd_randomForest.py
 
 
-# Conclusions  
+## Conclusions  
 
 - Higher features. I tried looking at network-based metrics to add into the embeddings. 
 For example:
@@ -105,7 +105,7 @@ It is really difficult to create test data, that has some similarity to real dat
  during development.
 
 
-# Improvements
+## Improvements
 
 - The performance logging should be updated to include CPU etc which is suitable for the compute cluster we're at
 - The graph image that is written is not very helpful, it should be updated to a nicer looking perhaps
@@ -123,7 +123,7 @@ animal model experiments, or similar to build a case.
 
 
 
-# Some results
+## Some results
 
 Result 1: 
 Hyperpigmentation of the skin (MONDO:0019290) could be treated by Azelaic acid (CHEMBL.COMPOUND:CHEMBL1238)
