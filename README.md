@@ -1,5 +1,6 @@
 
-## Simple Install
+A package for predicting some new drug x disease interactions
+
 
 ## Create conda env
 
