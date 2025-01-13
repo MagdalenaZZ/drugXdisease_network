@@ -113,6 +113,9 @@ The package includes the following modules:
 ## Conclusions
 
 ### Feature Engineering
+
+This is a way to create more features for learning without adding more data, but just using the existing data.
+
 - Added graph-based metrics to embeddings:
   - **Shortest Path Length**: Between drug and disease nodes.
   - **Number of Paths**: Connections between drug and disease nodes.
@@ -120,7 +123,7 @@ The package includes the following modules:
   - **Node Degree**: Number of connections for high-degree diseases and genes.
   - **Betweenness Centrality**: Key regulators in the graph.
   - **Clustering Coefficient**: Local connectivity of nodes.
-This is a way to create more features for learning without adding more data, but just using the existing data.
+
 
 ### Embeddings
 - Improved embeddings by increasing dimensionality and richness of the knowledge graph.
