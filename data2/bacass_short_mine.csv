@@ -1,2 +1,0 @@
-ID	R1	R2	LongFastQ	Fast5	GenomeSize
-mysample	https://nf-core-data.s3.eu-west-2.amazonaws.com/data/Illumina/illumina_R1.fastq.gz	https://nf-core-data.s3.eu-west-2.amazonaws.com/data/Illumina/illumina_R2.fastq.gz	NA	NA	5.6m
